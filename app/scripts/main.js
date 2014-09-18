@@ -1,6 +1,6 @@
 'use strict';
 
-var landingPageURL, utmSource, utmCampaign, utmMedium;
+var landingPageURL, utmSource, utmCampaign, utmMedium, utmContent;
 
 var valid = false;
 var errors = [];
@@ -16,6 +16,7 @@ function getValues () {
     if (utmSource === 'other') {
         utmSource = $('#sourceOther').val();
     }
+    utmContent = $('input[name=utm_content]').val();
 }
 
 function checkValues () {
@@ -40,9 +41,11 @@ function checkValues () {
     }
 
     var pattern = /^[\w-]+$/g;
-    if (!pattern.test(utmCampaign)) {
-        valid = false;
-        errors.push('Referral ID can only contain letters, numbers, hyphens and underscores');
+    if (utmCampaign) {
+        if (!pattern.test(utmCampaign)) {
+            valid = false;
+            errors.push('Referral ID can only contain letters, numbers, hyphens and underscores (no spaces)');
+        }
     }
 
     // Source
@@ -54,7 +57,15 @@ function checkValues () {
     var pattern2 = /^[\w-\.]+$/g;
     if (!pattern2.test(utmSource)) {
         valid = false;
-        errors.push('Source Other can only contain letters, numbers, hyphens, underscores and dots');
+        errors.push('Source Other can only contain letters, numbers, hyphens, underscores and dots (no spaces)');
+    }
+
+    if (utmContent) {
+        var pattern3 = /^[\w-\.]+$/g;
+        if (!pattern3.test(utmContent)) {
+            valid = false;
+            errors.push('Granular detail can only contain letters, numbers, hyphens, underscores and dots (no spaces)');
+        }
     }
 
 }
@@ -79,6 +90,10 @@ function outputTaggedURL () {
     taggedURL += '&utm_campaign=' + utmCampaign;
     taggedURL += '&utm_source=' + utmSource;
     taggedURL += '&utm_medium=' + utmMedium;
+
+    if (utmContent) {
+        taggedURL += '&utm_content=' + utmContent;
+    }
 
     $('.result').hide();
     $('#result-success').show();

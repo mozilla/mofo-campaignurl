@@ -38,13 +38,14 @@
 
                       <!-- REF ID / NAME -->
                       <div class="form-group">
-                        <label for="utm_source">2. Referral ID / Campaign Name</label>
-                        <input type="url" class="form-control" name="utm_campaign" placeholder="e.g. makerparty2014_snippet">
+                        <small class="pull-right"><a href="https://docs.google.com/a/mozillafoundation.org/spreadsheets/d/1GIhOB5ERW9FvvNazBaLKsEX6ZFga3GYWDFd7b4zrCPs/edit#gid=0" target="_blank">see the list</a></small>
+                        <label for="utm_source">2. Referral ID / Campaign Name </label>
+                        <input type="text" class="form-control" name="utm_campaign" placeholder="e.g. makerparty2014_snippet">
                       </div>
 
 
                       <div class="row">
-                         <div class="col-sm-6">
+                         <div class="col-sm-4">
                             <h5>3. Medium</h5>
 
                             <!-- SOURCE -->
@@ -78,11 +79,17 @@
                                 Directory Tiles
                               </label>
                             </div>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="utm_medium" value="referral">
+                                Website (tracked as 'referral')
+                              </label>
+                            </div>
                             <p>&nbsp;&nbsp;<small><span class="glyphicon glyphicon-plus"></span> <a href="https://bugzilla.mozilla.org/enter_bug.cgi?assigned_to=adam%40mozillafoundation.org&bug_file_loc=http%3A%2F%2F&bug_ignored=0&bug_severity=normal&bug_status=NEW&cf_fx_iteration=---&cf_fx_points=---&comment=Please%20add%20this%20new%20item%20to%20the%20Campaign%20URL%20Builder.&component=Metrics&contenttypemethod=autodetect&contenttypeselection=text%2Fplain&defined_groups=1&flag_type-4=X&flag_type-607=X&flag_type-791=X&flag_type-800=X&flag_type-803=X&form_name=enter_bug&maketemplate=Remember%20values%20as%20bookmarkable%20template&op_sys=Mac%20OS%20X&priority=--&product=Mozilla%20Foundation&rep_platform=x86&short_desc=Add%20%7BSUGGESTED%20NAME%7D%20as%20a%20new%20Medium%2FSource%20on%20the%20Campaign%20URL%20Builder&target_milestone=---&version=unspecified">Add another</a></small></p>
                             <!-- END MEDIUM -->
 
                          </div>
-                         <div class="col-sm-6">
+                         <div class="col-sm-4">
                             <h5>4. Campaign Source</h5>
 
                             <!-- SOURCE -->
@@ -90,6 +97,18 @@
                               <label>
                                 <input type="radio" name="utm_source" value="firefox">
                                 Firefox
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="utm_source" value="mozilla.org">
+                                mozilla.org
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="utm_source" value="webmaker.org">
+                                webmaker.org
                               </label>
                             </div>
                             <div class="radio">
@@ -128,11 +147,21 @@
                                   <input placeholder="Other" type="text" class="form-control input-sm" id="sourceOther" name="sourceOther">
                                 </div>
                             </div>
-                            <p>&nbsp;&nbsp;<small><span class="glyphicon glyphicon-plus"></span> <a href="https://bugzilla.mozilla.org/enter_bug.cgi?assigned_to=adam%40mozillafoundation.org&bug_file_loc=http%3A%2F%2F&bug_ignored=0&bug_severity=normal&bug_status=NEW&cf_fx_iteration=---&cf_fx_points=---&comment=Please%20add%20this%20new%20item%20to%20the%20Campaign%20URL%20Builder.&component=Metrics&contenttypemethod=autodetect&contenttypeselection=text%2Fplain&defined_groups=1&flag_type-4=X&flag_type-607=X&flag_type-791=X&flag_type-800=X&flag_type-803=X&form_name=enter_bug&maketemplate=Remember%20values%20as%20bookmarkable%20template&op_sys=Mac%20OS%20X&priority=--&product=Mozilla%20Foundation&rep_platform=x86&short_desc=Add%20%7BSUGGESTED%20NAME%7D%20as%20a%20new%20Medium%2FSource%20on%20the%20Campaign%20URL%20Builder&target_milestone=---&version=unspecified">Add another (if you use Other regularly)</a></small></p>
+                            <p>&nbsp;&nbsp;<small><span class="glyphicon glyphicon-plus"></span> <a href="https://bugzilla.mozilla.org/enter_bug.cgi?assigned_to=adam%40mozillafoundation.org&bug_file_loc=http%3A%2F%2F&bug_ignored=0&bug_severity=normal&bug_status=NEW&cf_fx_iteration=---&cf_fx_points=---&comment=Please%20add%20this%20new%20item%20to%20the%20Campaign%20URL%20Builder.&component=Metrics&contenttypemethod=autodetect&contenttypeselection=text%2Fplain&defined_groups=1&flag_type-4=X&flag_type-607=X&flag_type-791=X&flag_type-800=X&flag_type-803=X&form_name=enter_bug&maketemplate=Remember%20values%20as%20bookmarkable%20template&op_sys=Mac%20OS%20X&priority=--&product=Mozilla%20Foundation&rep_platform=x86&short_desc=Add%20%7BSUGGESTED%20NAME%7D%20as%20a%20new%20Medium%2FSource%20on%20the%20Campaign%20URL%20Builder&target_milestone=---&version=unspecified">Add another </a></small></p>
                          </div>
-                      </div>
 
+                        <div class="col-sm-4">
+                          <!-- REF ID / NAME -->
+                          <div class="form-group">
+                            <label for="utm_source">5. Really <em>really</em> granular detail </label>
+                            <input type="text" class="form-control input-sm" name="utm_content" placeholder="e.g. banner_image_link">
+                            <p class="text-muted"><small>This is optional. It's useful if you are promoting the same ask in many places on a single campaign source. E.g. Two links in the same email newsletter.</small></p>
+                          </div>
+                        </div>
+
+                      </div>
                       <button type="submit" class="btn btn-success btn-lg" id="getTaggedURL">Get Tagged URL</button>
+
                 </div>
             </div>
             <div class="row">
