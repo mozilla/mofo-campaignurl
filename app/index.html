@@ -1,0 +1,185 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>MoFo Campaign URL Builder</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+        <div class="container">
+            <div class="header">
+                <h3 class="text-muted">MoFo Campaign URL Builder</h3>
+            </div>
+
+            <div class="row input-section">
+                <div class="col-md-12">
+
+                      <!-- LANDING PAGE -->
+                      <div class="form-group">
+                        <label for="landingPageURL">1. Landing Page</label>
+                        <input type="url" class="form-control" name="landingPageURL" placeholder="http://...">
+                      </div>
+
+                      <!-- REF ID / NAME -->
+                      <div class="form-group">
+                        <label for="utm_source">2. Referral ID / Campaign Name</label>
+                        <input type="url" class="form-control" name="utm_campaign" placeholder="e.g. makerparty2014_snippet">
+                      </div>
+
+
+                      <div class="row">
+                         <div class="col-sm-6">
+                            <h5>3. Medium</h5>
+
+                            <!-- SOURCE -->
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="utm_medium" value="email" checked>
+                                Email
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="utm_medium" value="social">
+                                Social Media
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="utm_medium" value="banner">
+                                Banner
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="utm_medium" value="snippet">
+                                Snippet
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="utm_medium" value="directory-tiles">
+                                Directory Tiles
+                              </label>
+                            </div>
+                            <p>&nbsp;&nbsp;<small><span class="glyphicon glyphicon-plus"></span> <a href="https://bugzilla.mozilla.org/enter_bug.cgi?assigned_to=adam%40mozillafoundation.org&bug_file_loc=http%3A%2F%2F&bug_ignored=0&bug_severity=normal&bug_status=NEW&cf_fx_iteration=---&cf_fx_points=---&comment=Please%20add%20this%20new%20item%20to%20the%20Campaign%20URL%20Builder.&component=Metrics&contenttypemethod=autodetect&contenttypeselection=text%2Fplain&defined_groups=1&flag_type-4=X&flag_type-607=X&flag_type-791=X&flag_type-800=X&flag_type-803=X&form_name=enter_bug&maketemplate=Remember%20values%20as%20bookmarkable%20template&op_sys=Mac%20OS%20X&priority=--&product=Mozilla%20Foundation&rep_platform=x86&short_desc=Add%20%7BSUGGESTED%20NAME%7D%20as%20a%20new%20Medium%2FSource%20on%20the%20Campaign%20URL%20Builder&target_milestone=---&version=unspecified">Add another</a></small></p>
+                            <!-- END MEDIUM -->
+
+                         </div>
+                         <div class="col-sm-6">
+                            <h5>4. Campaign Source</h5>
+
+                            <!-- SOURCE -->
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="utm_source" value="firefox">
+                                Firefox
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="utm_source" value="newsletter-mofo" checked>
+                                Newsletter (MoFo)
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="utm_source" value="newsletter-moco">
+                                Newsletter (MoCo)
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="utm_source" value="newsletter-partner">
+                                Newsletter (Partner)
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="utm_source" value="twitter.com">
+                                twitter.com
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="utm_source" value="facebook.com">
+                                facebook.com
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <input type="radio" name="utm_source" value="other" id="sourceOtherRadio">
+                              <div class="form-group">
+                                  <input placeholder="Other" type="text" class="form-control input-sm" id="sourceOther" name="sourceOther">
+                                </div>
+                            </div>
+                            <p>&nbsp;&nbsp;<small><span class="glyphicon glyphicon-plus"></span> <a href="https://bugzilla.mozilla.org/enter_bug.cgi?assigned_to=adam%40mozillafoundation.org&bug_file_loc=http%3A%2F%2F&bug_ignored=0&bug_severity=normal&bug_status=NEW&cf_fx_iteration=---&cf_fx_points=---&comment=Please%20add%20this%20new%20item%20to%20the%20Campaign%20URL%20Builder.&component=Metrics&contenttypemethod=autodetect&contenttypeselection=text%2Fplain&defined_groups=1&flag_type-4=X&flag_type-607=X&flag_type-791=X&flag_type-800=X&flag_type-803=X&form_name=enter_bug&maketemplate=Remember%20values%20as%20bookmarkable%20template&op_sys=Mac%20OS%20X&priority=--&product=Mozilla%20Foundation&rep_platform=x86&short_desc=Add%20%7BSUGGESTED%20NAME%7D%20as%20a%20new%20Medium%2FSource%20on%20the%20Campaign%20URL%20Builder&target_milestone=---&version=unspecified">Add another (if you use Other regularly)</a></small></p>
+                         </div>
+                      </div>
+
+                      <button type="submit" class="btn btn-success btn-lg" id="getTaggedURL">Get Tagged URL</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-info result" id="result-placeholder" role="alert">
+                        ...
+                    </div>
+                    <div class="alert alert-success result" id="result-success" role="alert">
+                      <h4>Your tagged URL:</h4>
+                        <p id="result-url"></p>
+                        <p><br /><a href="" id="result-link" class="btn btn-default" target="_blank"><span class="glyphicon glyphicon-share"></span> TEST IT WORKS</a></p>
+                        <p><br /><small>If promoting this link on social channels, it's best to run this tagged URL through our shortener (http://mzl.la), to produce something that looks better in a tweet.</small></p>
+                    </div>
+                    <div class="alert alert-danger result" id="result-error" role="alert">
+                        err
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="../bower_components/jquery/dist/jquery.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+
+        <!-- build:js scripts/plugins.js -->
+        <script src="../bower_components/bootstrap/js/affix.js"></script>
+        <script src="../bower_components/bootstrap/js/alert.js"></script>
+        <script src="../bower_components/bootstrap/js/dropdown.js"></script>
+        <script src="../bower_components/bootstrap/js/tooltip.js"></script>
+        <script src="../bower_components/bootstrap/js/modal.js"></script>
+        <script src="../bower_components/bootstrap/js/transition.js"></script>
+        <script src="../bower_components/bootstrap/js/button.js"></script>
+        <script src="../bower_components/bootstrap/js/popover.js"></script>
+        <script src="../bower_components/bootstrap/js/carousel.js"></script>
+        <script src="../bower_components/bootstrap/js/scrollspy.js"></script>
+        <script src="../bower_components/bootstrap/js/collapse.js"></script>
+        <script src="../bower_components/bootstrap/js/tab.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
