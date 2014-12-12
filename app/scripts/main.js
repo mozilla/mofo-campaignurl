@@ -19,6 +19,18 @@ function getValues () {
     utmContent = $('input[name=utm_content]').val();
 }
 
+function getSimpleValues () {
+    landingPageURL = $('input:radio[name=landingPageURL]:checked').val();
+    utmCampaign = $('input[name=utm_campaign]').val();
+    utmMedium = $('input[name=utm_medium]').val();
+    utmSource = $('input[name=utm_source]').val();
+    utmContent = $('input[name=utm_content]').val();
+
+    // check for spaces and noise
+    // prefix these to match the current source
+    utmCampaign = utmSource + '_' + utmCampaign.replace(/\W/g, '').toLowerCase();
+}
+
 function checkValues () {
     valid = true;
     errors = [];
@@ -115,6 +127,16 @@ function outputFeedback () {
 
 $('#getTaggedURL').click(function () {
     getValues();
+    checkValues();
+    if (valid) {
+        outputTaggedURL();
+    } else {
+        outputFeedback();
+    }
+});
+
+$('#simpleGetTaggedURL').click(function () {
+    getSimpleValues();
     checkValues();
     if (valid) {
         outputTaggedURL();
