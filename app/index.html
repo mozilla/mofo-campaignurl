@@ -25,6 +25,7 @@
         <div class="container">
             <div class="header">
                 <h3 class="text-muted">MoFo Campaign URL Builder</h3>
+                <p class="text-muted">A tool to make it easier to build URLs we can use in campaigns that will show up correctly in Google Analytics.</p>
             </div>
 
             <div class="row input-section">
@@ -32,7 +33,7 @@
 
                       <!-- LANDING PAGE -->
                       <div class="form-group">
-                        <label for="landingPageURL">1. Landing Page</label>
+                        <label for="landingPageURL">1. Landing Page <span class="glyphicon glyphicon-question-sign text-muted" title="Where you are linking TO"></span></label>
                         <input type="url" class="form-control" name="landingPageURL" placeholder="http://...">
                       </div>
 
@@ -85,12 +86,12 @@
                                 Website (tracked as 'referral')
                               </label>
                             </div>
-                            <p>&nbsp;&nbsp;<small><span class="glyphicon glyphicon-plus"></span> <a href="https://bugzilla.mozilla.org/enter_bug.cgi?assigned_to=adam%40mozillafoundation.org&bug_file_loc=http%3A%2F%2F&bug_ignored=0&bug_severity=normal&bug_status=NEW&cf_fx_iteration=---&cf_fx_points=---&comment=Please%20add%20this%20new%20item%20to%20the%20Campaign%20URL%20Builder.&component=Metrics&contenttypemethod=autodetect&contenttypeselection=text%2Fplain&defined_groups=1&flag_type-4=X&flag_type-607=X&flag_type-791=X&flag_type-800=X&flag_type-803=X&form_name=enter_bug&maketemplate=Remember%20values%20as%20bookmarkable%20template&op_sys=Mac%20OS%20X&priority=--&product=Mozilla%20Foundation&rep_platform=x86&short_desc=Add%20%7BSUGGESTED%20NAME%7D%20as%20a%20new%20Medium%2FSource%20on%20the%20Campaign%20URL%20Builder&target_milestone=---&version=unspecified">Add another</a></small></p>
+                            <p>&nbsp;&nbsp;<small><span class="glyphicon glyphicon-plus"></span> <a href="https://github.com/mozilla/mofo-campaignurl/issues/new">Request another</a></small></p>
                             <!-- END MEDIUM -->
 
                          </div>
                          <div class="col-sm-4">
-                            <h5>4. Campaign Source</h5>
+                            <h5>4. Campaign Source <span class="glyphicon glyphicon-question-sign text-muted" title="Where you are linking FROM"></span></h5>
 
                             <!-- SOURCE -->
                             <div class="radio">
@@ -103,6 +104,12 @@
                               <label>
                                 <input type="radio" name="utm_source" value="mozilla.org">
                                 mozilla.org
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="utm_source" value="advocacy.mozilla.org">
+                                advocacy.mozilla.org
                               </label>
                             </div>
                             <div class="radio">
@@ -147,7 +154,7 @@
                                   <input placeholder="Other" type="text" class="form-control input-sm" id="sourceOther" name="sourceOther">
                                 </div>
                             </div>
-                            <p>&nbsp;&nbsp;<small><span class="glyphicon glyphicon-plus"></span> <a href="https://bugzilla.mozilla.org/enter_bug.cgi?assigned_to=adam%40mozillafoundation.org&bug_file_loc=http%3A%2F%2F&bug_ignored=0&bug_severity=normal&bug_status=NEW&cf_fx_iteration=---&cf_fx_points=---&comment=Please%20add%20this%20new%20item%20to%20the%20Campaign%20URL%20Builder.&component=Metrics&contenttypemethod=autodetect&contenttypeselection=text%2Fplain&defined_groups=1&flag_type-4=X&flag_type-607=X&flag_type-791=X&flag_type-800=X&flag_type-803=X&form_name=enter_bug&maketemplate=Remember%20values%20as%20bookmarkable%20template&op_sys=Mac%20OS%20X&priority=--&product=Mozilla%20Foundation&rep_platform=x86&short_desc=Add%20%7BSUGGESTED%20NAME%7D%20as%20a%20new%20Medium%2FSource%20on%20the%20Campaign%20URL%20Builder&target_milestone=---&version=unspecified">Add another </a></small></p>
+                            <p>&nbsp;&nbsp;<small><span class="glyphicon glyphicon-plus"></span> <a href="https://github.com/mozilla/mofo-campaignurl/issues/new">Request another </a></small></p>
                          </div>
 
                         <div class="col-sm-4">
@@ -184,6 +191,9 @@
                 </div>
             </div>
 
+            <div class="footer">
+                <p><a href="https://github.com/mozilla/mofo-campaignurl">Source code on Github</a> | <a href="https://github.com/mozilla/mofo-campaignurl/issues">File a bug</a></p>
+            </div>
 
         </div>
 
